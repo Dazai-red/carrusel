@@ -1,19 +1,40 @@
-.carrusel{
-    
+.carrousel{
+    margin: 15% auto auto;
+    width: 90%;
+    height: 500px;
+    max-width: 120em;
+    background-color: lightskyblue;
 }
 
-.carrusel .grande{
-
+.carrousel .grande{
+    //Tiene el doble de tamaño que su contenedor porque tiene dos img dentro
+    width: 200%;
+    background-color: orange;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 
-.carrusel .img{
-
+.carrousel .img{
+   width: calc(100% /2);
+    background-color: lime;
 }
 
-.carrusel .puntos {
-
+.carrousel .puntos {
+    width: 100%;
+    background-color: red;
+    padding: 1em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
-.carrusel .punto{
-
+.carrousel .punto{
+    list-style: none;
+    width: 2em;
+    height: 2em;
+    background-color: blue;
+    margin: 1em;
 }
