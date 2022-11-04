@@ -1,5 +1,7 @@
 const grande = document.querySelector(".grande");
 const punto = document.querySelectorAll(".punto");
+var anchoImg= document.querySelector('.img').clientWidth;
+console.log(anchoImg)
 
 console.log(grande);
 console.log(punto);
@@ -17,9 +19,10 @@ punto.forEach((cadaPunto, i) => {
     // posicion = 1 transformX es -50%
     // operacion = operacion * -50
     let posicion = i;
-    let operacion = posicion * -50;
+    let operacion = posicion * -anchoImg;
 
-    grande.style.transform = `translateX(${operacion}%)`;
+    console.log(posicion);
+    grande.style.transform = `translateX(${operacion}px)`;
     //console.log(operacion);
 
     punto.forEach((cadaPunto, i) => {
