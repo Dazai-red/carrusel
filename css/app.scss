@@ -1,63 +1,67 @@
-body {
-  background-color: #003e4f;
-}
-.carrousel {
-  margin: 10% auto auto;
-  width: 50%;
-  max-width: 120em;
-  background-color: #030d4f;
-  overflow-x: hidden;
-  padding: 2em;
-  border-radius: 8px;
-}
 
-.carrousel .grande {
-  //Tiene el doble de tamaño que su contenedor porque tiene dos img dentro
-  width: 200%;
-  background-color: #ceecef;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  transition: all 0.5s ease;
-  border-radius: 8px;
-}
 
-.carrousel .img {
-  // se divide entre el número de elementos
-  width: calc(100% / 2 - 2em);
-  background-color: #fb0c06;
-  min-height: 10vh;
-  max-height: 50vh;
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
-  margin: 1em;
+img {
+  width: 100px;
+  height: 100px;
 }
+.carousel-with-images{
+  .container12{
+    background-color: grey;
+    width: 1140px;
+    margin: 70px auto;
+    
+    /* title container and controls */
 
-.carrousel .puntos {
-  list-style-type: none;
-  width: 100%;
-  margin: 1em;
-  //background-color: red;
-  padding: 1em 0 0;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0.4em;
-}
+    .title-and-controls-wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      .title{
+        color: #fff;
+      }
+      .dots-container{
+        .dots{
+          background: #fff;
+          height: 3px;
+          width: 10px;
+          cursor: pointer;
+          border: none;
+          margin-right: 3px;
+          &:hover,&:active{
+            background: red;
+          }
+        }
+      }
+    }
 
-.carrousel .punto {
-  width: 2em;
-  height: 2em;
-  border-radius: 50%;
-  background-color: #e7edea;
-  margin: 1em 1em 0;
-}
-
-.carrousel .punto.activo {
-  background-color: #ffc52c;
+    /* Main container and arrows*/
+    .main-container{
+      display: flex;
+      align-items: center;
+      position: relative;
+      .left-arrow,.right-arrow{
+        position: absolute;
+        border: none;
+        background: rgba(0,0,0,0.3);
+        font-size: 40px;
+        height: 50%;
+        top: calc(50% - 25%);
+        line-height: 40px;
+        width: 50px;
+        color: #fff;
+        cursor: pointer;
+        z-index: 2;
+        &:hover{
+          background: rgba(0,0,0,0.9);
+        }
+      }
+      .left-arrow{
+        left: 0;
+      }
+      .right-arrow{
+        right: 0;
+      }
+      
+    }
+  }
 }

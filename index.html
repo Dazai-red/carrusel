@@ -6,29 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Carrusel</title>
+    <script src="https://kit.fontawesome.com/fd48554932.js" crossorigin="anonymous"></script>
+    <title>Carousel </title>
   </head>
   <body>
-    <div class="carrousel">
-      <div class="grande">
-        <!-- img.img[src="#" alt="Imagen $"]*2 -->
-        <img
-          src="assets/img/pexels-carlos-oliva-3586966.jpg"
-          alt="Imagen 1"
-          class="img"
-        />
-        <img
-          src="assets/img/pexels-maxime-francis-2246476.jpg"
-          alt="Imagen 2"
-          class="img"
-        />
-        
+    <div class="carousel-with-images">
+      <div class="container12">
+        <div class="title-and-controls-wrapper">
+          <h2 class="title">Galería de imágenes</h2>
+          <div class="dots-container">
+            <button class="dots"></button>
+            <button class="dots"></button>
+          </div>
+        </div>
+
+        <div class="main-container">
+          <button role="button" id="left-arrow" class="left-arrow">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+
+          <div class="carousel-container">
+            <div class="carousel">
+              <div class="picture-container">
+                <a href="#" class="link-picture">
+                  <img class="picture" src="/assets/img/1.jpg" alt="none">
+                </a>
+              </div>
+              <div class="picture-container">
+                <a href="#" class="link-picture">
+                  <img class="picture" src="/assets/img/2.jpg" alt="none">
+                </a>
+              </div>
+              <div class="picture-container">
+                <a href="#" class="link-picture">
+                  <img class="picture" src="/assets/img/3.jpg" alt="none">
+                </a>
+              </div>
+              <div class="picture-container">
+                <a href="#" class="link-picture">
+                  <img class="picture" src="/assets/img/4.jpg" alt="none">
+                </a>
+              </div>
+              <div class="picture-container">
+                <a href="#" class="link-picture">
+                  <img class="picture" src="/assets/img/5.jpg" alt="none">
+                </a>
+              </div>
+              <div class="picture-container">
+                <a href="#" class="link-picture">
+                  <img class="picture" src="/assets/img/6.jpg" alt="none">
+                </a>
+              </div>
+              <div class="picture-container">
+                <a href="#" class="link-picture">
+                  <img class="picture" src="/assets/img/7.jpg" alt="none">
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <button role="button" id="right-arrow" class="right-arrow">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+
       </div>
-      <!-- ul.puntos>li.punto*2 -->
-      <ul class="puntos">
-        <li class="punto activo"></li>
-        <li class="punto"></li>
-      </ul>
     </div>
     <script src="app.js"></script>
   </body>

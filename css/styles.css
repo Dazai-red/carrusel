@@ -1,63 +1,60 @@
-body {
-  background-color: #003e4f;
+img {
+  width: 100px;
+  height: 100px;
 }
 
-.carrousel {
-  margin: 10% auto auto;
-  width: 50%;
-  max-width: 120em;
-  background-color: #030d4f;
-  overflow-x: hidden;
-  padding: 2em;
-  border-radius: 8px;
+.carousel-with-images .container12 {
+  background-color: grey;
+  width: 1140px;
+  margin: 70px auto;
+  /* title container and controls */
+  /* Main container and arrows*/
 }
-
-.carrousel .grande {
-  width: 200%;
-  background-color: #ceecef;
+.carousel-with-images .container12 .title-and-controls-wrapper {
   display: flex;
-  flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  transition: all 0.5s ease;
-  border-radius: 8px;
+  align-items: end;
 }
-
-.carrousel .img {
-  width: calc(50% - 2em);
-  background-color: #fb0c06;
-  min-height: 10vh;
-  max-height: 50vh;
-  border-radius: 8px;
-  width: 100%;
-  height: auto;
-  margin: 1em;
+.carousel-with-images .container12 .title-and-controls-wrapper .title {
+  color: #fff;
 }
-
-.carrousel .puntos {
-  list-style-type: none;
-  width: 100%;
-  margin: 1em;
-  padding: 1em 0 0;
+.carousel-with-images .container12 .title-and-controls-wrapper .dots-container .dots {
+  background: #fff;
+  height: 3px;
+  width: 10px;
+  cursor: pointer;
+  border: none;
+  margin-right: 3px;
+}
+.carousel-with-images .container12 .title-and-controls-wrapper .dots-container .dots:hover, .carousel-with-images .container12 .title-and-controls-wrapper .dots-container .dots:active {
+  background: red;
+}
+.carousel-with-images .container12 .main-container {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
   align-items: center;
-  padding: 0.4em;
+  position: relative;
 }
-
-.carrousel .punto {
-  width: 2em;
-  height: 2em;
-  border-radius: 50%;
-  background-color: #e7edea;
-  margin: 1em 1em 0;
+.carousel-with-images .container12 .main-container .left-arrow, .carousel-with-images .container12 .main-container .right-arrow {
+  position: absolute;
+  border: none;
+  background: rgba(0, 0, 0, 0.3);
+  font-size: 40px;
+  height: 50%;
+  top: 25%;
+  line-height: 40px;
+  width: 50px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
 }
-
-.carrousel .punto.activo {
-  background-color: #ffc52c;
+.carousel-with-images .container12 .main-container .left-arrow:hover, .carousel-with-images .container12 .main-container .right-arrow:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+.carousel-with-images .container12 .main-container .left-arrow {
+  left: 0;
+}
+.carousel-with-images .container12 .main-container .right-arrow {
+  right: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
