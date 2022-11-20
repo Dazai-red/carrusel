@@ -1,40 +1,39 @@
-img {
-  width: 100px;
-  height: 100px;
+body {
+  background-color: #141414;
+  font-family: "Open Sans", sans-serif;
 }
 
-.carousel-with-images .container12 {
-  background-color: grey;
-  width: 1140px;
-  margin: 70px auto;
+.carousel-with-images {
   /* title container and controls */
   /* Main container and arrows*/
 }
-.carousel-with-images .container12 .title-and-controls-wrapper {
+.carousel-with-images .title-and-controls-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: end;
 }
-.carousel-with-images .container12 .title-and-controls-wrapper .title {
+.carousel-with-images .title-and-controls-wrapper .title {
   color: #fff;
+  font-size: 30px;
 }
-.carousel-with-images .container12 .title-and-controls-wrapper .dots-container .dots {
+.carousel-with-images .title-and-controls-wrapper .dots-container .dots {
   background: #fff;
   height: 3px;
   width: 10px;
   cursor: pointer;
   border: none;
-  margin-right: 3px;
+  margin-right: 2px;
 }
-.carousel-with-images .container12 .title-and-controls-wrapper .dots-container .dots:hover, .carousel-with-images .container12 .title-and-controls-wrapper .dots-container .dots:active {
+.carousel-with-images .title-and-controls-wrapper .dots-container .dots:hover, .carousel-with-images .title-and-controls-wrapper .dots-container .dots.active {
   background: red;
 }
-.carousel-with-images .container12 .main-container {
+.carousel-with-images .main-container {
   display: flex;
   align-items: center;
   position: relative;
+  /* Carousel */
 }
-.carousel-with-images .container12 .main-container .left-arrow, .carousel-with-images .container12 .main-container .right-arrow {
+.carousel-with-images .main-container .left-arrow, .carousel-with-images .main-container .right-arrow {
   position: absolute;
   border: none;
   background: rgba(0, 0, 0, 0.3);
@@ -47,14 +46,50 @@ img {
   cursor: pointer;
   z-index: 2;
 }
-.carousel-with-images .container12 .main-container .left-arrow:hover, .carousel-with-images .container12 .main-container .right-arrow:hover {
+.carousel-with-images .main-container .left-arrow:hover, .carousel-with-images .main-container .right-arrow:hover {
   background: rgba(0, 0, 0, 0.9);
 }
-.carousel-with-images .container12 .main-container .left-arrow {
+.carousel-with-images .main-container .left-arrow {
   left: 0;
 }
-.carousel-with-images .container12 .main-container .right-arrow {
+.carousel-with-images .main-container .right-arrow {
   right: 0;
+}
+.carousel-with-images .main-container .carousel-container {
+  width: 100%;
+  padding: 20px 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.carousel-with-images .main-container .carousel-container .carousel {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.carousel-with-images .main-container .carousel-container .carousel .carousel-item {
+  min-width: 20%;
+  transition: 0.3s ease all;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.carousel-with-images .main-container .carousel-container .carousel .carousel-item .picture {
+  width: 100%;
+  vertical-align: top;
+}
+.carousel-with-images .main-container .carousel-container .carousel .carousel-item.hover {
+  transform: scale(1.2);
+  transform-origin: center;
+}
+@media screen and (max-width: 800px) {
+  .carousel-with-images .carousel-container {
+    overflow: visible;
+  }
+  .carousel-with-images .carousel-container .carousel {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .carousel-with-images .dots-container, .carousel-with-images .left-arrow, .carousel-with-images .right-arrow {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

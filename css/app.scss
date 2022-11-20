@@ -1,15 +1,9 @@
-
-
-img {
-  width: 100px;
-  height: 100px;
+body{
+  background-color: #141414;
+  font-family: 'Open Sans', sans-serif;
 }
+
 .carousel-with-images{
-  .container12{
-    background-color: grey;
-    width: 1140px;
-    margin: 70px auto;
-    
     /* title container and controls */
 
     .title-and-controls-wrapper{
@@ -18,16 +12,18 @@ img {
       align-items: end;
       .title{
         color: #fff;
+        font-size: 30px;
       }
-      .dots-container{
+      .dots-container {
         .dots{
           background: #fff;
           height: 3px;
           width: 10px;
           cursor: pointer;
           border: none;
-          margin-right: 3px;
-          &:hover,&:active{
+          margin-right: 2px;
+          &:hover,
+          &.active {
             background: red;
           }
         }
@@ -52,7 +48,7 @@ img {
         cursor: pointer;
         z-index: 2;
         &:hover{
-          background: rgba(0,0,0,0.9);
+          background: rgba(0,0,0, .9);
         }
       }
       .left-arrow{
@@ -62,6 +58,49 @@ img {
         right: 0;
       }
       
+       /* Carousel */
+      .carousel-container{
+        width: 100%;
+        padding: 20px 0;
+        overflow: hidden;
+        scroll-behavior: smooth; // cambia el comportamiento del scroll para que no sea brusco
+        .carousel{
+          display: flex;
+          flex-wrap: nowrap;
+          .carousel-item{
+            min-width: 20%;
+            transition: .3s ease all;
+            box-shadow: 5px 5px 10px rgba(0,0,0, 0.3);
+            .picture{
+              width: 100%;
+              vertical-align: top;
+            }
+          }
+          .carousel-item.hover{
+            transform: scale(1.2);
+            transform-origin: center;
+          }
+        }
+      }
+
     }
-  }
+    @media screen and (max-width: 800px) {
+      &{
+        .carousel-container {
+          overflow: visible ;
+          .carousel{
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr) ;
+            gap: 20px ;
+          }
+        }
+        .dots-container,.left-arrow,.right-arrow{
+          display: none;
+        }
+      }  
+      }
+      
 }
+
+// Tengo que arreglar esta parte ya que por especificidad me da error y tengo que usar important
+
