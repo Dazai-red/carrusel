@@ -1,5 +1,5 @@
 ## Descripción🏝️
-Carrusel de imágenes sin hacer uso de librerias con fines didácticos hecho con HTML, SASS y JavaScript
+Carrusel de imágenes sin hacer uso de librerias con fines didácticos hecho con HTML, CSS/SASS y JavaScript
 
 ## Autor🖊️
 José Antonio
