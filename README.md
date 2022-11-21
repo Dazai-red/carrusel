@@ -9,4 +9,4 @@ José Antonio
 [Enlace a GitHub Pages](https://dazai-red.github.io/carrusel/)
 
 ## Instalación🛠️
-Este proyecto no requiere de instalación. Simplemente abre la carpeta o haz doble click en el index.html
+Este proyecto no requiere de instalación. Simplemente abre con doble click en el index.html
