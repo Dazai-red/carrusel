@@ -72,7 +72,9 @@ body{
             transition: .3s ease all;
             box-shadow: 5px 5px 10px rgba(0,0,0, 0.3);
             .picture{
+              height: 100%;
               width: 100%;
+              object-fit: contain;
               vertical-align: top;
             }
           }
@@ -83,23 +85,28 @@ body{
         }
       }
 
+    } 
+}
+
+@media screen and (max-width: 800px) {
+  .carousel-with-images{
+    .title-and-controls-wrapper .dots-container{
+      display: none;
     }
-    @media screen and (max-width: 800px) {
-      &{
-        .carousel-container {
-          overflow: visible ;
-          .carousel{
-            display: grid !important;
-            grid-template-columns: repeat(3, 1fr) ;
-            gap: 20px ;
-          }
+    .main-container{
+      .carousel-container {
+        overflow: visible ;
+        .carousel{
+          display: grid;
+          grid-template-columns: repeat(3, 1fr) ;
+          gap: 20px ;
         }
-        .dots-container,.left-arrow,.right-arrow{
-          display: none;
-        }
-      }  
       }
-      
+      .left-arrow, .right-arrow{
+        display: none;
+      } 
+    }
+  }    
 }
 
 // Tengo que arreglar esta parte ya que por especificidad me da error y tengo que usar important

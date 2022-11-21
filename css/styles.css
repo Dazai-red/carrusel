@@ -71,23 +71,29 @@ body {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .carousel-with-images .main-container .carousel-container .carousel .carousel-item .picture {
+  height: 100%;
   width: 100%;
+  object-fit: contain;
   vertical-align: top;
 }
 .carousel-with-images .main-container .carousel-container .carousel .carousel-item.hover {
   transform: scale(1.2);
   transform-origin: center;
 }
+
 @media screen and (max-width: 800px) {
-  .carousel-with-images .carousel-container {
+  .carousel-with-images .title-and-controls-wrapper .dots-container {
+    display: none;
+  }
+  .carousel-with-images .main-container .carousel-container {
     overflow: visible;
   }
-  .carousel-with-images .carousel-container .carousel {
-    display: grid !important;
+  .carousel-with-images .main-container .carousel-container .carousel {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-  .carousel-with-images .dots-container, .carousel-with-images .left-arrow, .carousel-with-images .right-arrow {
+  .carousel-with-images .main-container .left-arrow, .carousel-with-images .main-container .right-arrow {
     display: none;
   }
 }
